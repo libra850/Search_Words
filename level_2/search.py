@@ -18,6 +18,7 @@ def check_keyword(key_word):
 
 
 if __name__ == "__main__":
+    #検索キーワード入力
     input_word = sys.argv
     input_word = input_word[1]
     searching = f'Searching for "{input_word}" in HelloWorld.txt'
