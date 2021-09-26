@@ -34,6 +34,3 @@ if __name__ == "__main__":
         exit()
     load(input_word)
     check_keyword(input_word)
-    
-        
-    

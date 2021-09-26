@@ -31,4 +31,3 @@ if __name__ == "__main__":
     load(input_word)
     txt_data = txt_load()
     check_keyword(input_word,txt_data)
-
