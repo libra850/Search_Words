@@ -15,6 +15,7 @@ def txt_load():
 # キーワードを含むか判定  
 def check_keyword(key,target_file):
     if key in target_file:
+
         result = "TRUE"
     else:
         result = "FALSE"
@@ -31,4 +32,5 @@ if __name__ == "__main__":
     load(input_word)
     txt_data = txt_load()
     check_keyword(input_word,txt_data)
+
 
