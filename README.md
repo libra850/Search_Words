@@ -82,7 +82,7 @@ python all_search.py <調べたい単語>
 ```
 例：
 ```
-$ python search.py icc
+$ python all_search.py icc
 Searching for "icc"
 Results:
 1. Amir cleared to tour New Zealand after visa granted
