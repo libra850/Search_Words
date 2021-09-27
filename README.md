@@ -36,13 +36,9 @@ __＜Dockerの起動＞__
 1. 下記のコマンドをターミナル内で入力してください
 ```
 docker-compose up --build -d
------------------------------------------------------------
-REPOSITORY            TAG       IMAGE ID       CREATED        SIZE
-coding_test_python3   latest    b26c0edaf588   3 hours ago    1GB
 ```    
-※上記の結果が出力されます
 
-2. 確認できたら次にこのコマンドを入力してください
+2. 次にこのコマンドを入力してください
 ```
 docker compose exec python3 bash
 ```
@@ -71,8 +67,7 @@ python search.py <調べたい単語>
 ```
 例：
 ```
-python search.py ICC
-
+$ python search.py ICC
 Searching for "icc" in HelloWorld.txt
 Result: TRUE
 ```
@@ -87,22 +82,29 @@ python all_search.py <調べたい単語>
 ```
 例：
 ```
-python search.py ICC
+$ python search.py icc
+Searching for "icc"
+Results:
+1. Amir cleared to tour New Zealand after visa granted
+2. HelloWorld
+3. ICC admits tweaking draws put Pakistan India same grou
+4. India replace injured Yuvraj with batsman Pandey
+5. Ireland win toss put Bangladesh into b
 
-Searching for "icc" in HelloWorld.txt
-Result: TRUE
+Total:  5
 ```
 -----------------------------------------------------------
 __＜Dockerの終了方法＞__
 ```
+root@697a25f717c2:~#　exit
 exit
 ```
 ```
-docker compose stop
+Coding_Test %  docker compose stop
 ```
 下記の状態になっていれば終了です
 ```
-docker compose ls
+Coding_Test %　docker compose ls
 --------------------------
 NAME                STATUS
 ```
