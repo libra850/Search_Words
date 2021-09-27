@@ -1,20 +1,21 @@
 import sys
 
 # 検索文
-def load(key_word):
-    searching = f'Searching for "{key_word}" in HelloWorld.txt'
-    print(searching)
+def sentence(key_word):
+    loading_sentence = f'Searching for "{key_word}" in HelloWorld.txt'
+    print(loading_sentence)
 
-# txtファイルの読み込み
-def txt_load():
-    file = open('../articles/HelloWorld.txt', 'r')
-    words_data = file.read().casefold()
-    file.close()
-    return words_data
+# HelloWorld.txtの読み込み
+def file_load():
+    article = open('../articles/HelloWorld.txt', 'r')
+    article_contents = article.read().casefold()
+    article.close()
+    return article_contents
 
 # キーワードを含むか判定  
-def check_keyword(key,target_file):
-    if key in target_file:
+def check_keyword(key):
+    article_data = file_load()
+    if key in article_data:
         result = "TRUE"
     else:
         result = "FALSE"
@@ -23,11 +24,6 @@ def check_keyword(key,target_file):
 
 if __name__ == "__main__":
     #検索キーワード入力
-    try:
-        input_word = sys.argv[1].casefold()
-    except IndexError:
-        print("Error: 検索キーワードが入力されていません")
-        exit()
-    load(input_word)
-    txt_data = txt_load()
-    check_keyword(input_word,txt_data)
+    input_word = sys.argv[1].casefold()  
+    sentence(input_word)
+    check_keyword(input_word)
