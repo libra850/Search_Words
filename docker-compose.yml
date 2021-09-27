@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'Docker_coding_test'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+    - ./articles:/root/articles
+    - ./level_2:/root/level_2
+    - ./level_3:/root/level_3
