@@ -23,7 +23,11 @@ def check_keyword(key):
 
 
 if __name__ == "__main__":
-    #検索キーワード入力
-    input_word = sys.argv[1].casefold()  
+    # 検索ワード有無の確認
+    try:
+        input_word = sys.argv[1].casefold()
+    except IndexError:
+        print("Error: 検索キーワードが入力されていません")
+        exit()
     sentence(input_word)
     check_keyword(input_word)
