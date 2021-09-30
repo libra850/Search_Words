@@ -48,7 +48,7 @@ cd level_3
 __＜Dockerを使用する場合＞__
 1. 下記のコマンドをターミナル内で入力してください
 ```
-docker-compose up --build -d
+docker-compose up -d
 ```    
 
 2. 次にこのコマンドを入力してください
